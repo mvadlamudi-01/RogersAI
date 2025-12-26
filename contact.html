@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Contact – Mike Rogers AI</title>
+    <meta
+      name="description"
+      content="Get in touch with Mike Rogers AI for questions, feedback, or collaboration opportunities."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mini-chat.css" />
+  </head>
+
+  <body>
+    <!-- TOP NAVBAR -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand">
+          <span class="brand-logo">SR</span>
+          <span>Mike Rogers AI</span>
+        </a>
+
+        <nav class="nav">
+          <div class="nav-item dropdown">
+            <button class="nav-link dropdown-toggle" type="button">
+              RogersAI Coaches ▾
+            </button>
+            <div class="dropdown-menu">
+              <a href="comm-coach.html">Communication Skills Coach</a>
+              <a href="life-coach.html">Life &amp; Balance Coach</a>
+              <a href="job-coach.html">Job Interview Coach</a>
+              <a href="support-info.html">Support &amp; Information</a>
+            </div>
+          </div>
+          <a class="nav-link" href="index.html#about">About</a>
+          <a class="nav-link" href="index.html#coaching">Coaching</a>
+          <a class="nav-link" href="index.html#faq">FAQ</a>
+          <a class="nav-link active-link" href="contact.html">Contact</a>
+        </nav>
+
+        <a
+          class="nav-cta"
+          href="chatbot.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Speak to Rogers Now
+        </a>
+      </div>
+    </header>
+
+    <!-- CONTACT HERO -->
+    <section class="hero hero-small">
+      <div class="container hero-inner">
+        <div class="hero-right">
+          <h1>Get in Touch</h1>
+          <p class="hero-subtitle">
+            Have a question, idea, or collaboration in mind? Send a message and we’ll get back to you.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT FORM SECTION -->
+    <section class="section">
+      <div class="container contact-container">
+        <div class="contact-card">
+          <h2>Send a Message</h2>
+          <p class="contact-intro">
+            Fill out the form below and your message will be delivered directly.
+          </p>
+
+          <form id="contact-form" class="contact-form">
+            <div class="form-group">
+              <label for="from_name">Your Name</label>
+              <input
+                type="text"
+                id="from_name"
+                name="from_name"
+                placeholder="Jane Doe"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="from_email">Your Email</label>
+              <input
+                type="email"
+                id="from_email"
+                name="from_email"
+                placeholder="jane@email.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="How can we help you?"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="hero-cta">
+              Send Message
+            </button>
+
+            <p id="form-status" class="form-status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Mike Rogers AI. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- EMAILJS -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("Ua7PSP1H1H7zgkGOL");
+      })();
+
+      const form = document.getElementById("contact-form");
+      const status = document.getElementById("form-status");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        status.textContent = "Sending message...";
+
+        emailjs
+          .sendForm(
+            "service_ids",
+            "template_contact",
+            this
+          )
+          .then(
+            () => {
+              status.textContent = "Message sent successfully!";
+              form.reset();
+            },
+            () => {
+              status.textContent = "Something went wrong. Please try again.";
+            }
+          );
+      });
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <script src="nav.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.11/dist/purify.min.js"></script>
+    <script src="mini-chat.js" defer></script>
+  </body>
+</html>

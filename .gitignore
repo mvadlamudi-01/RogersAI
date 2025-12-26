@@ -1,0 +1,19 @@
+# Node
+node_modules/
+
+# Environment variables
+.env
+
+# Virtual Environment
+.venv
+
+# ZIP / backups
+*.zip
+sunny-voice-server/node_modules/
+sunny-voice-server/.env
+
+
+# OS files
+.DS_Store
+Thumbs.db
+

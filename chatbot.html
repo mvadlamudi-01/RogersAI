@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mike Rogers AI – Chat</title>
+
+  <!-- Site-wide styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Chat-only styles -->
+  <link rel="stylesheet" href="chatbot.css" />
+
+  <!-- Markdown rendering (same approach as mini-chat) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.min.js"></script>
+</head>
+
+<body>
+  <!-- ===== SITE HEADER / NAV ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-logo">SR</span>
+        <span>Mike Rogers AI</span>
+      </a>
+
+      <nav class="nav">
+        <div class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle" type="button">
+            Rogers AI Coaches ▾
+          </button>
+          <div class="dropdown-menu">
+            <a href="comm-coach.html">Communication Skills Coach</a>
+            <a href="life-coach.html">Life &amp; Balance Coach</a>
+            <a href="job-coach.html">Job Interview Coach</a>
+            <a href="support-info.html">Support &amp; Information</a>
+          </div>
+        </div>
+
+        <a class="nav-link" href="index.html#about">About</a>
+        <a class="nav-link" href="index.html#coaching">Coaching</a>
+        <a class="nav-link" href="index.html#faq">FAQ</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+
+      <a class="nav-cta" href="chatbot.html">Speak to Mike Roger Now</a>
+    </div>
+  </header>
+
+  <!-- ===== CHAT PAGE ===== -->
+  <main class="chat-layout">
+    <div class="chat-wrapper">
+      <!-- Chat header -->
+      <div class="chat-header">
+        <div class="avatar">SR</div>
+        <div>
+          <div class="header-title">RogersAI</div>
+          <div class="header-status">
+            <span class="status-dot"></span>
+            <span>Online · AI Assistant</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Messages -->
+      <div class="chat-body">
+        <div id="chatMessages" class="chat-messages"></div>
+      </div>
+
+      <!-- Suggested prompts -->
+      <div class="suggested">
+        <button onclick="sendQuick('Help me sound more confident when I speak.')">
+          Sound more confident
+        </button>
+        <button onclick="sendQuick('How can I stop saying um and ah in my speech?')">
+          Reduce filler words
+        </button>
+        <button onclick="sendQuick('Give me feedback on how I introduce myself.')">
+          Intro feedback
+        </button>
+      </div>
+
+      <!-- Input -->
+      <div class="chat-input-area">
+        <input
+          id="userInput"
+          type="text"
+          placeholder="Type your message…"
+          autocomplete="off"
+        />
+        <button id="sendBtn">Send</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="nav.js"></script>
+  <script src="chat.js"></script>
+</body>
+</html>
