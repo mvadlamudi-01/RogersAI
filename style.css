@@ -223,8 +223,8 @@ img {
 
 .features-strip {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 52px;
 }
 
 .feature-card {
@@ -245,6 +245,9 @@ img {
 }
 
 .feature-card p {
+  text-align: left;
+  max-width: 42ch;           /* controls readable line length */
+  text-wrap: pretty; 
   font-size: 0.9rem;
   color: #c3c9f5;
   margin-bottom: 10px;
@@ -539,4 +542,29 @@ img {
 .form-status {
   margin-top: 1rem;
   font-weight: 600;
+}
+#features.section {
+  padding-bottom: 18px;   
+}
+
+#about.section {
+  padding-top: 68px;      
+}
+#faq.section{
+  padding-top: 68px;     /* was 56px */
+  padding-bottom: 24px;  /* was 56px */
+}
+/* ==== CLEAN BULLET LISTS ==== */
+.bullet-list {
+  margin-top: 12px;
+  padding-left: 22px;          /* fixes indent + aligns bullets nicely */
+}
+
+.bullet-list li {
+  margin: 8px 0;               /* spacing between bullets */
+  padding-left: 6px;           /* spacing between bullet and text */
+}
+
+.bullet-list li::marker {
+  color: #ffb36a;              /* matches your accent tone */
 }
