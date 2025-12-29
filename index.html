@@ -53,7 +53,6 @@
       <div class="container hero-inner">
         <div class="hero-left">
           <div class="hero-photo-card">
-            <!-- Replace this image file with your preferred Mike Rogers photo -->
             <img src="images/mike_rogers.jpeg" alt="Mike Rogers" class="hero-photo" />
           </div>
         </div>
@@ -133,27 +132,44 @@
         <h2>Frequently Asked Questions</h2>
 
         <div class="faq-item">
-          <h3>What can I ask Mike Rogers AI?</h3>
-          <p>
-            Ask for help with speeches, briefings, presentations, stakeholder messaging, interview answers, and tough
-            Q&amp;A drills. You can also ask for plain-English explanations of leadership tradeoffs, risk, and cybersecurity
-            topics (defensive and lawful only).
-          </p>
+          <button class="faq-q" type="button" aria-expanded="false">
+            <span>What can I ask Mike Rogers AI?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+
+          <div class="faq-a" hidden>
+            <p>
+              Ask for help with speeches, briefings, presentations, stakeholder messaging, interview answers, and tough
+              Q&amp;A drills. You can also ask for plain-English explanations of leadership tradeoffs, risk, and cybersecurity
+              topics (defensive and lawful only).
+            </p>
+          </div>
+        </div>
+
+
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">
+          <span>Is this the real Mike Rogers?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" hidden>
+            <p>
+              This is an AI coach modeled after Mike Rogers background and values. It does not replace real-life conversations but gives you instant guidance 24/7.
+            </p>
+          </div>
         </div>
 
         <div class="faq-item">
-          <h3>Is this the real Mike Rogers?</h3>
-          <p>
-            This is an AI coach modeled after Mike Rogers background and values. It does not replace real-life conversations but gives you instant guidance 24/7.
-          </p>
-        </div>
-
-        <div class="faq-item">
-          <h3>Does it give political endorsements or predictions?</h3>
-          <p>
-            Rogers AI is designed for constructive, non-campaign coaching. It avoids partisan endorsements,
-            campaigning, and election predictions.
-          </p>
+          <button class="faq-q" type="button" aria-expanded="false">
+          <span>Does it give political endorsements or predictions?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" hidden>
+            <p>
+              Rogers AI is designed for constructive, non-campaign coaching. It avoids partisan endorsements,
+              campaigning, and election predictions.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -179,15 +195,6 @@
                 Wikipedia – Mike Rogers (Michigan politician)
               </a>
             </li>
-            <!-- <li>
-              <a
-                href="https://mikerogers.house.gov/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Official House Website
-              </a>
-            </li> -->
           </ul>
         </div>
 
@@ -203,15 +210,6 @@
                 CityBiz – Mike Rogers elected chairman of the MITRE board (article)
               </a>
             </li>
-            <!-- <li>
-              <a
-                href="https://www.mikerogersforcongress.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Campaign Website
-              </a>
-            </li> -->
           </ul>
         </div>
 
@@ -294,7 +292,7 @@
             </p>
           </div>
 
-          <!-- ✅ ALL LINKS FROM YOUR Mike Rogers Data.txt -->
+          <!-- ✅ ALL LINKS OF Mike Rogers  -->
           <div class="footer-col">
             <h4>Sources &amp; Links</h4>
             <ul class="social-links">
@@ -316,24 +314,6 @@
                   <i class="fas fa-newspaper"></i> CityBiz – MITRE Board Article
                 </a>
               </li>
-              <!-- <li>
-                <a
-                  href="https://mikerogers.house.gov/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fas fa-landmark"></i> Congressional Website (during House service)
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.mikerogersforcongress.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fas fa-globe"></i> Campaign Website
-                </a>
-              </li> -->
               <li>
                 <a
                   href="https://x.com/MikeRogersForMI"
@@ -391,4 +371,5 @@
       <script src="mini-chat.js" defer></script>
     </footer>
   </body>
+  <script src="faq.js" defer></script>
 </html>
